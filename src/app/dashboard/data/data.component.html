@@ -17,4 +17,4 @@
     </tr>
 </table>
 
-<button [ngClass]="(i + 1) == currentPage ? 'active' : 'inactive'" type="button" class="pageButton" (click)="selectPage(i)" *ngFor="let page of [].constructor(returnAllPages()); let i = index">{{i + 1}}</button>
+<button [ngClass]="page == currentPage ? 'active' : ''" (click)="selectPage(page)" type="button" *ngFor="let page of returnAllPages() | pagination ">{{page}}</button>
