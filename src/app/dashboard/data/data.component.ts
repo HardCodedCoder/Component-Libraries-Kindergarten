@@ -30,10 +30,10 @@ export class DataComponent implements OnInit {
     return age;
   }
 
-  async selectPage(i: any) {
+  selectPage(i: any) {
     let currentPage = i;
     this.selectPageEvent.emit(currentPage)
-    await this.backendService.getChildren(currentPage);
+    this.backendService.getChildren(currentPage);
   }
 
   public returnAllPages() {
