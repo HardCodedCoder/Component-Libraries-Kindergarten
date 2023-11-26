@@ -1,4 +1,4 @@
-<form [formGroup]="addChildForm" (ngSubmit)="onSubmit()">
+<!-- <form [formGroup]="addChildForm" (ngSubmit)="onSubmit()">
     <h2>Ihr Kind anmelden!</h2>
     <input placeholder="Name" type="input" formControlName="name"><br />
     <input placeholder="Geburtsdatum" type="date" formControlName="birthDate"><br />
@@ -8,4 +8,37 @@
             {{kindergarden.name}}, {{kindergarden.address}}</option>
     </select>
     <button type="submit">Erfassen</button>
-</form>
+</form> -->
+
+  <form class="flex-container" [formGroup]="addChildForm" (ngSubmit)="onSubmit()" #kinderForm="ngForm">
+          <h1 class="header">Anmeldung</h1>
+          <mat-form-field class="flex-container-element">
+            <input matInput placeholder="Name" formControlName="name">
+            <mat-error *ngIf="addChildForm.controls['name'].touched && addChildForm.controls['name'].invalid">
+              Vorname ist erforderlich.
+            </mat-error>
+          </mat-form-field>
+          <br/>
+          <mat-form-field class="flex-container-element">
+            <input matInput [matDatepicker]="picker" placeholder="Geburtsdatum" formControlName="birthDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="addChildForm.controls['birthDate'].touched && addChildForm.controls['birthDate'].invalid">
+              Geburtsdatum ist erforderlich.
+            </mat-error>
+          </mat-form-field>
+          <br/>
+          <mat-form-field class="flex-container-element">
+            <mat-label>Kindergarten</mat-label>
+            <mat-select placeholder="Kindergarten" formControlName="kindergardenId">
+              <mat-option *ngFor="let kindergarden of storeService.kindergardens" [value]="kindergarden.id">
+                {{ kindergarden.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="addChildForm.controls['kindergardenId'].touched && !addChildForm.controls['kindergardenId'].valid">
+              Bitte wählen Sie einen Kindergarten aus.
+              </mat-error>
+          </mat-form-field>
+          <br/>
+          <button class="flex-container-element" mat-raised-button color="accent" type="submit">Anmelden</button>
+    <form>

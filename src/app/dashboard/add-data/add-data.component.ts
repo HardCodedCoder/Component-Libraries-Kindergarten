@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { BackendService } from 'src/app/shared/backend.service';
 import { StoreService } from 'src/app/shared/store.service';
+import {SuccessDialogComponent} from "../../success-dialog/success-dialog.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-add-data',
@@ -10,7 +12,10 @@ import { StoreService } from 'src/app/shared/store.service';
 })
 export class AddDataComponent implements OnInit{
 
-  constructor(private formbuilder: FormBuilder, public storeService: StoreService, public backendService: BackendService) {
+  constructor(private formbuilder: FormBuilder,
+              public storeService: StoreService,
+              public backendService: BackendService,
+              public dialog: MatDialog) {
   }
   public addChildForm: any;
   @Input() currentPage!: number;
@@ -24,9 +29,16 @@ export class AddDataComponent implements OnInit{
   }
 
   onSubmit() {
-    if(this.addChildForm.valid) {
-      console.log(this.currentPage);
-      this.backendService.addChildData(this.addChildForm.value, this.currentPage);
+    if (this.addChildForm.valid) {
+      this.backendService.addChildData(this.addChildForm.value)
+        .subscribe(_ => {
+          this.backendService.getChildren(this.currentPage, this.storeService.pageSize);
+            this.dialog.open(SuccessDialogComponent, {
+              data: {
+                name: this.addChildForm.value.name,
+              }
+            })
+          })
+      }
     }
-  }
 }
