@@ -2,21 +2,21 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { BackendService } from 'src/app/shared/backend.service';
 import { StoreService } from 'src/app/shared/store.service';
-import {SuccessDialogComponent} from "../../success-dialog/success-dialog.component";
-import {MatDialog} from "@angular/material/dialog";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-add-data',
   templateUrl: './add-data.component.html',
   styleUrls: ['./add-data.component.scss']
 })
-export class AddDataComponent implements OnInit{
+export class AddDataComponent implements OnInit {
 
   constructor(private formbuilder: FormBuilder,
               public storeService: StoreService,
               public backendService: BackendService,
-              public dialog: MatDialog) {
+              private snackBar: MatSnackBar) {
   }
+
   public addChildForm: any;
   @Input() currentPage!: number;
 
@@ -33,12 +33,8 @@ export class AddDataComponent implements OnInit{
       this.backendService.addChildData(this.addChildForm.value)
         .subscribe(_ => {
           this.backendService.getChildren(this.currentPage, this.storeService.pageSize);
-            this.dialog.open(SuccessDialogComponent, {
-              data: {
-                name: this.addChildForm.value.name,
-              }
-            })
-          })
-      }
+          this.snackBar.open('Anmeldung erfolgreich! 🥳', '', {duration: 3000});
+        });
     }
+  }
 }
