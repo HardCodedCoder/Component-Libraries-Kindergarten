@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { BackendService } from 'src/app/shared/backend.service';
 import { StoreService } from 'src/app/shared/store.service';
 import {MatSnackBar} from "@angular/material/snack-bar";
+import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-add-data',
@@ -20,6 +21,7 @@ export class AddDataComponent implements OnInit {
   public addChildForm: any;
   @Input() currentPage!: number;
 
+
   ngOnInit(): void {
     this.addChildForm = this.formbuilder.group({
       name: ['', [Validators.required]],
@@ -28,12 +30,21 @@ export class AddDataComponent implements OnInit {
     })
   }
 
+  showToast(): void {
+    const toastEl = document.getElementById('successToast');
+    if (toastEl)
+    {
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    }
+  }
+
   onSubmit() {
     if (this.addChildForm.valid) {
       this.backendService.addChildData(this.addChildForm.value)
         .subscribe(_ => {
           this.backendService.getChildren(this.currentPage, this.storeService.pageSize);
-          this.snackBar.open('Anmeldung erfolgreich! 🥳', '', {duration: 3000});
+          this.showToast();
         });
     }
   }
