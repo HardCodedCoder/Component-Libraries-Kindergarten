@@ -19,7 +19,6 @@ import { MatInputModule} from '@angular/material/input';
 import { MatDialogModule} from "@angular/material/dialog";
 import { MatDatepickerModule} from "@angular/material/datepicker";
 import { MatNativeDateModule} from "@angular/material/core";
-import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
 import { MatTableModule} from "@angular/material/table";
 import { MatPaginatorModule} from "@angular/material/paginator";
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -37,7 +36,6 @@ import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
     HeaderComponent,
     ButtonComponent,
     PaginationPipe,
-    SuccessDialogComponent,
   ],
   imports: [
     BrowserModule,
