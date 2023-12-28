@@ -2,25 +2,22 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { BackendService } from 'src/app/shared/backend.service';
 import { StoreService } from 'src/app/shared/store.service';
-import {MatSnackBar} from "@angular/material/snack-bar";
 import * as bootstrap from 'bootstrap';
 
 @Component({
-  selector: 'app-add-data',
-  templateUrl: './add-data.component.html',
-  styleUrls: ['./add-data.component.scss']
+  selector: 'app-register-child',
+  templateUrl: './register-child.component.html',
+  styleUrls: ['./register-child.component.scss']
 })
-export class AddDataComponent implements OnInit {
-
-  constructor(private formbuilder: FormBuilder,
-              public storeService: StoreService,
-              public backendService: BackendService,
-              private snackBar: MatSnackBar) {
-  }
+export class RegisterChildComponent implements OnInit{
 
   public addChildForm: any;
   @Input() currentPage!: number;
 
+  constructor(private formbuilder: FormBuilder,
+              public storeService: StoreService,
+              public backendService: BackendService) {
+  }
 
   ngOnInit(): void {
     this.addChildForm = this.formbuilder.group({
@@ -49,3 +46,8 @@ export class AddDataComponent implements OnInit {
     }
   }
 }
+
+
+
+
+
