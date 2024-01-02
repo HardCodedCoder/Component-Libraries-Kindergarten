@@ -3,11 +3,14 @@
   <mat-tab *ngFor="let kindergarden of this.storeService.kindergardens" label="{{ kindergarden.name }}">
     <div class="kindergarten-details">
       <h2>{{ kindergarden.name }}</h2>
-      <mat-carousel [timings]="timing" [autoplay]="true" [interval]="5000">
-        <mat-carousel-slide *ngFor="let image of kindergarden.images" [image]="image">
-          <img [src]="image" alt="Foto des Kindergartens">
-        </mat-carousel-slide>
-      </mat-carousel>
+      <carousel [itemsPerSlide]="1" [singleSlideOffset]="false" [interval]="5000" [noPause]="true" [noWrap]="false">
+        <slide *ngFor="let imageUrl of getKindergardenUrls(kindergarden)">
+          <div class="kindergarten-slideshow-container">
+            <img [src]="imageUrl" alt="Foto des Kindergartens" class="kindergarten-image">
+          </div>
+        </slide>
+      </carousel>
+      <br>
       <p>{{ kindergarden.description }}</p>
     </div>
   </mat-tab>

@@ -1,5 +1,31 @@
-.kindergarten-image {
+
+.kindergarten-slideshow-container {
   width: 100%;
-  max-height: 200px;
-  object-fit: cover;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
 }
+
+
+.kindergarten-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  color: #D9CCC1; /* Farbe der Überschrift, angepasst an Ihr Farbschema */
+  font-size: 2em; /* Größe der Überschrift */
+  margin-bottom: 0.5em; /* Abstand unter der Überschrift */
+  text-align: center; /* Zentriert die Überschrift */
+  font-weight: bold; /* Macht die Überschrift fett */
+}
+
+p {
+  margin: 10px;
+}
+

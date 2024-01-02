@@ -33,10 +33,4 @@ export class BackendService {
     public patchkindergardenData(kindergarden: Kindergarden): Observable<any> {
       return this.http.patch(`http://localhost:5000/kindergardens/${kindergarden.id}`, kindergarden)
     }
-
-    public deleteChildData(childId: string, page: number) {
-      this.http.delete(`http://localhost:5000/childs/${childId}`).subscribe(_=> {
-        this.getChildren(page, 5);
-      })
-    }
 }

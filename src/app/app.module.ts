@@ -31,6 +31,7 @@ import { MatSortModule } from "@angular/material/sort";
 import { KindergardensComponent } from './kindergardens/kindergardens.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatTabsModule} from "@angular/material/tabs";
+import {CarouselModule} from "ngx-bootstrap/carousel";
 
 
 
@@ -70,7 +71,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     MatProgressSpinnerModule,
     MatSortModule,
     MatGridListModule,
-    MatTabsModule
+    MatTabsModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

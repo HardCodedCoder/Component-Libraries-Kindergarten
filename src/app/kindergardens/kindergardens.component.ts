@@ -13,7 +13,7 @@ export class KindergardensComponent {
    constructor(public storeService: StoreService) {
    }
 
-  getKindergardenImage(kindergarden: Kindergarden) {
-
-  }
+  getKindergardenUrls(kindergarden: Kindergarden): string[] {
+     return this.storeService.getKindergardenUrls(kindergarden);
+    }
 }
