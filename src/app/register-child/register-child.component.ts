@@ -38,6 +38,23 @@ export class RegisterChildComponent implements OnInit{
 
   onSubmit() {
     if (this.addChildForm.valid) {
+      const selectedKindergardenId = this.addChildForm.value.kindergardenId;
+      const selectedKindergardenIndex = this.storeService.kindergardens.findIndex(kg => kg.id === selectedKindergardenId);
+
+      if (selectedKindergardenIndex !== -1) {
+        let kindergarden = this.storeService.kindergardens[selectedKindergardenIndex];
+        kindergarden.enrolled++;
+
+        this.backendService.patchkindergardenData(kindergarden)
+          .subscribe(response => {
+            console.log("Success");
+            console.log(response);
+          }, error => {
+            console.log("No success");
+            console.log(error);
+          });
+      }
+
       this.backendService.addChildData(this.addChildForm.value)
         .subscribe(_ => {
           this.backendService.getChildren(this.currentPage, this.storeService.pageSize);
@@ -45,6 +62,7 @@ export class RegisterChildComponent implements OnInit{
         });
     }
   }
+
 }
 
 

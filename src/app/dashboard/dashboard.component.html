@@ -1,2 +1,43 @@
-<app-data [currentPage]="currentPage" (selectPageEvent)="receiveMessage($event)"></app-data>
-<br>
+<div class="content-container" style="background-color: #8C503A">
+
+  <!-- Left Column for Table and Widgets -->
+  <div class="left-column">
+    <!-- Description for Widgets -->
+    <mat-card class="description-card-widgets">
+      <mat-card-title class="center-text">Kindergarten Capacity Widgets</mat-card-title>
+      <mat-card-content class="widgets-description center-text">
+        Each widget represents a kindergarten's current enrollment status.
+        The numbers indicate the total capacity and current enrollment.
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Widgets -->
+    <div class="widgets-container">
+      <app-widget-component *ngFor="let kindergarden of this.storeService.kindergardens"
+                            [enrolledChildren]="kindergarden.enrolled"
+                            [totalCapacity]="kindergarden.capacity"
+                            [kindergardenName]="kindergarden.name">
+      </app-widget-component>
+    </div>
+  </div>
+
+  <!-- Right Column for Table -->
+  <div class="right-column">
+
+    <div class="banner-container">
+      <img class="banner-images" alt="Happy children holding hands web banner" src="assets/images/kids-group-in-school-website-header.jpg"/>
+    </div>
+
+    <!-- Description for Table -->
+    <mat-card class="description-card-table table-card-style">
+      <mat-card-title>Discover Kindergarten Spaces</mat-card-title>
+      <mat-card-content class="table-description left-text">
+        Finding the perfect kindergarten for your little one is now easier than ever! Our comprehensive overview lets you quickly see the number of available spots in kindergartens across the city. With real-time updates, you can stay informed about openings and make the best decision for your family. Embrace peace of mind, knowing you have all the information at your fingertips to choose the right start for your child's educational journey.
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Table -->
+    <app-data [currentPage]="currentPage" (selectPageEvent)="receiveMessage($event)"></app-data>
+  </div>
+
+</div>

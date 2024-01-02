@@ -1,0 +1,63 @@
+.kindergarten-widget {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background-color: #D9CCC1;
+
+  .progress-background, .progress-foreground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+  }
+  h3 {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .progress-foreground {
+    z-index: 2; // Above the spinner to create the inner border
+  }
+
+  .mat-progress-spinner {
+    margin: 20px auto;
+  }
+
+  .places-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+  }
+}
+
+.spinner-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-container mat-progress-spinner circle {
+  /* Set the size of the spinner as desired */
+  width: 100px;
+  height: 100px;
+
+}
+
+
+

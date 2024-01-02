@@ -1,0 +1,16 @@
+<div class="kindergarten-widget">
+  <h3>{{ kindergardenName }}</h3>
+  <div class="spinner-container">
+    <svg class="progress-background" width="120px" height="120px" viewBox="0 0 120 120">
+      <circle class="circle" cx="60" cy="60" r="52" fill="none" stroke="#000" stroke-width="3"></circle>
+    </svg>
+    <mat-progress-spinner mode="determinate" [value]="fillPercentage" class="progress-spinner"
+                          [ngStyle]="{'--mdc-circular-progress-active-indicator-color': getSpinnerColor(fillPercentage)}">
+    </mat-progress-spinner>
+    <svg class="progress-foreground" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#000" stroke-width="1"></circle>
+  </svg>
+    <div class="places-left">{{totalCapacity - enrolledChildren}}</div>
+  </div>
+</div>
+

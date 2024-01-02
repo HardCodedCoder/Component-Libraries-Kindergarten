@@ -23,8 +23,15 @@ import { MatPaginatorModule} from "@angular/material/paginator";
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { RegisterChildComponent } from './register-child/register-child.component';
+import { WidgetComponentComponent } from './dashboard/widget-component/widget-component.component';
+import { MatCardModule} from "@angular/material/card";
+import { MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { MatSortModule } from "@angular/material/sort";
+import { KindergardensComponent } from './kindergardens/kindergardens.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatTabsModule} from "@angular/material/tabs";
+
 
 
 @NgModule({
@@ -36,6 +43,8 @@ import { RegisterChildComponent } from './register-child/register-child.componen
     ButtonComponent,
     PaginationPipe,
     RegisterChildComponent,
+    WidgetComponentComponent,
+    KindergardensComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +66,11 @@ import { RegisterChildComponent } from './register-child/register-child.componen
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
-    MatSnackBarModule
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatGridListModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -73,40 +73,10 @@
       "id": "GfSMZ0N"
     },
     {
-      "name": "Linda Weidhofer",
-      "kindergardenId": 4,
-      "birthDate": "2023-11-20T23:00:00.000Z",
-      "id": "tUTBYp4"
-    },
-    {
-      "name": "Gino Pensuni",
-      "kindergardenId": 4,
-      "birthDate": "1992-08-08T22:00:00.000Z",
-      "id": "OHNTYkX"
-    },
-    {
-      "name": "Gino Valentino Pensuni",
-      "kindergardenId": 2,
-      "birthDate": "1992-09-07T22:00:00.000Z",
-      "id": "gQ7faWn"
-    },
-    {
       "name": "Gino Valentino Pensuni",
       "kindergardenId": 5,
       "birthDate": "1992-09-07T22:00:00.000Z",
-      "id": "feNhJ_7"
-    },
-    {
-      "name": "Gino Valentino Pensuni",
-      "kindergardenId": 1,
-      "birthDate": "1992-09-07T22:00:00.000Z",
-      "id": "YwpteID"
-    },
-    {
-      "name": "Gino Valentino Pensuni",
-      "kindergardenId": 1,
-      "birthDate": "1992-09-07T22:00:00.000Z",
-      "id": "z99onka"
+      "id": "7SGKYaH"
     }
   ],
   "kindergardens": [
@@ -115,35 +85,50 @@
       "name": "Waldorfkindergarden im Zentrum Wiens",
       "address": "Oleandergasse 21, 1220 Wien",
       "betreiber": "MA 10 - Wiener Kindergärten",
-      "typ": 1
+      "typ": 1,
+      "capacity": 150,
+      "enrolled": 1,
+      "description": "Unser Hauptaugenmerk richtet sich in all unseren Bestrebungen auf das Wesen des Kindes. Seine Individualität zu erkennen und zu pflegen und in seiner Entwicklung zur Entfaltung zu bringen ist uns eine bewusste Aufgabe.\n\nGestützt durch die Menschenkunde von Rudolf Steiner geben wir dem Kindergartenkind durch wiederkehrenden rhythmischen Tages-, Wochen-, und Jahresablauf die Möglichkeit Sicherheit zu empfinden und dadurch Vertrauen in die Welt aufzubauen.\n\nDas Kind lernt in den ersten Jahren (im ersten Jahr) vor allem durch Vorbild und Nachahmung. Die Pädagoginnen sind bestrebt durch Selbstwahrnehmung zur Selbsterziehung zu gelangen. Nur vom Menschen kann das Kind das Mensch-Sein lernen.\n\nDie Veränderung der Natur im Jahreslauf machen wir am Jahreszeitentisch und mit passenden Tätigkeiten erlebbar. Durch gemeinsame Feste, durch das Pflegen von unkonfessionellem, religiösen Kulturgut, wie zum Beispiel unserem Weihnachtsspiel, helfen wir dem Kind,\nauch im Seelischen zu wachsen.\n\n \nDer vorbildhafte und sorgfältige Umgang mit allen Dingen, die sich im Kindergarten befinden, sollen dem Kind helfen, Werte zu erkennen und zu erhalten.\n\nAlle unsere Spielsachen sind aus Naturmaterial verschiedenen Ursprungs, wie zum Beispiel: Rinde, Bockerl, Steine, Hölzer, Tücher und handgenähte Stoffpuppen. Die natürliche Vielfalt regt die frühkindliche Phantasie an und ermöglicht reichhaltige Sinneserfahrungen. Die Sinneslehre nach Rudolf Steiner, besonders die Pflege der vier unteren Sinne wie: Tast-, Lebens-, Bewegungs- und Gleichgewichtssinn sind uns ein großes Anliegen.\n\nUnsere prozesshaften, nachvollziehbaren Tätigkeiten, wie zum Bespiel der Weg vom Korn zum Brot, ermöglichen dem Kind selbst mitzuarbeiten. So kann es lernen, sich selbst und die Welt zu erleben und zu verstehen.\n\nDer Reigen oder Morgenkreis ist ein wichtiges, fixes Element unseres Tagesablaufs. Hier finden die Kinder den Morgenspruch, Lieder und Gedichte, die zur Jahreszeit und zu den angebotenen Tätigkeiten passen. Durch das Vorbild kann das Kind Bewegungen nachahmen und die Sprache lernen und festigen.\n\nEine Schlüsselrolle im Kindergarten hat das Freispiel.\nHier kann das Kind seine sozialen Fähigkeiten täglich neu erüben. Es lernt zu teilen, Konflikte zu bewältigen und in der Gruppe seinen Platz zu finden.\n\nMit allen unseren Bemühungen ist unser Ziel, das Kind in seiner Persönlichkeit gestärkt und bereit für die Schule, zu entlassen.\n\nIN LIEBE EMPFANGEN\nIN EHRFURCHT ERZIEHEN\nIN FREIHEIT ENTLASSEN"
     },
     {
       "id": 2,
       "name": "Kindergarden der Karl Schubert Schule für seelenpflegebedürftige Kinder und Jugendliche in Wien",
       "address": "Kanitzgasse 1-3, 1230 Wien",
       "betreiber": "Verein Karl Schubertschule für Seelenpflege- bedürftige Kinder und Jugendliche in Wien",
-      "typ": 1
+      "typ": 1,
+      "capacity": 120,
+      "enrolled": 8,
+      "description": "er Karl Schubert Kindergarten ist ein heilpädagogischer Kindergarten. Wir orientieren uns dabei an der Pädagogik und dem Menschenbild Rudolf Steiners. Danach kann der geistige Wesenskern – die Individualität des Menschen – niemals krank sein. Störungen, Behinderungen und Krankheiten treten im seelischen (Denken, Fühlen, Handeln) und körperlichen Bereich auf. Wir wollen seelenpflegebedürftigen Kindern dabei helfen, ihre ganz besondere Lebensaufgabe zu meistern."
     },
     {
       "id": 3,
       "name": "Kindergarden der Stadt Wien",
       "address": "Audorfgasse 20, 1210 Wien",
       "betreiber": "MA 10 - Wiener Kindergärten",
-      "typ": 2
+      "typ": 2,
+      "capacity": 157,
+      "enrolled": 2,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   \n\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   \n\nUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse"
     },
     {
       "id": 4,
       "name": "Kindergarden der Stadt Wien",
       "address": "Moßbachergasse 20-24, 1140 Wien",
       "betreiber": "MA 10 - Wiener Kindergärten",
-      "typ": 2
+      "typ": 2,
+      "capacity": 112,
+      "enrolled": 1,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   \n\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   \n\nUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse"
     },
     {
       "id": 5,
       "name": "Montessori Kinderhaus Wien 1",
       "address": "Nußdorferstraße 6, 1090 Wien",
       "betreiber": "Montessori Kinderhaus Wien",
-      "typ": 1
+      "typ": 1,
+      "capacity": 149,
+      "enrolled": 1,
+      "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   \n\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   \n\nUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse"
     }
   ]
 }

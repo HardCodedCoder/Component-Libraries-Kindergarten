@@ -1,0 +1,14 @@
+<!-- kindergartens.component.html -->
+<mat-tab-group>
+  <mat-tab *ngFor="let kindergarden of this.storeService.kindergardens" label="{{ kindergarden.name }}">
+    <div class="kindergarten-details">
+      <h2>{{ kindergarden.name }}</h2>
+      <mat-carousel [timings]="timing" [autoplay]="true" [interval]="5000">
+        <mat-carousel-slide *ngFor="let image of kindergarden.images" [image]="image">
+          <img [src]="image" alt="Foto des Kindergartens">
+        </mat-carousel-slide>
+      </mat-carousel>
+      <p>{{ kindergarden.description }}</p>
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,113 @@
+$primary-color: #BF6415;
+$text-color: #FFFFFF;
+$shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+$font-size-default: 14px;
+$margin-default: 10px;
+$padding-default: 10px;
+$border-radius-default: 10px;
+
+@mixin card-style {
+  padding: $padding-default;
+  margin: $margin-default auto;
+  text-align: center;
+  box-shadow: $shadow;
+  border-radius: $border-radius-default;
+  background-color: $primary-color;
+  box-sizing: border-box;
+}
+
+@mixin flex-display($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.content-container {
+  @include flex-display(row, space-between);
+}
+
+.left-column, .right-column {
+  @include flex-display(column, flex-start, flex-start);
+  width: auto;
+}
+
+.widgets-container {
+  @include flex-display(row, flex-start);
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 100%;
+}
+
+.widgets-description, .table-description {
+  top: 20px;
+  color: $text-color;
+  font-size: $font-size-default;
+  word-wrap: break-word;
+}
+
+.description-card-widgets, .description-card-table {
+  @include card-style;
+  text-align: left; // overriding for table card
+}
+
+.description-card-widgets {
+  width: 300px;
+  margin: 10px 10px 30px;
+}
+
+.description-card-table {
+  width: 100%;
+}
+
+.banner-container {
+  @include flex-display(row);
+  margin: $margin-default auto;
+  overflow: hidden;
+  max-height: 350px;
+  min-height: 150px;
+  border-radius: 15px;
+  box-shadow: $shadow;
+  width: 100%;
+}
+
+.banner-images {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-position: center center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.table-card-style {
+  background-color: #023E73;
+  color: $text-color;
+}
+
+.right-column {
+  width: auto;
+  margin-right: 10px;
+}
+
+.more-margin-bottom {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+app-widget-component {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-bottom: $margin-default;
+}
