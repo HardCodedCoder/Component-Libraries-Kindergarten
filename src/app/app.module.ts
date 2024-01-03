@@ -32,6 +32,7 @@ import { KindergardensComponent } from './kindergardens/kindergardens.component'
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatTabsModule} from "@angular/material/tabs";
 import {CarouselModule} from "ngx-bootstrap/carousel";
+import {LoadingSpinnerComponent} from "./loading-spinner/loading-spinner.component";
 
 
 
@@ -46,6 +47,7 @@ import {CarouselModule} from "ngx-bootstrap/carousel";
     RegisterChildComponent,
     WidgetComponentComponent,
     KindergardensComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
